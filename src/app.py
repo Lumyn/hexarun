@@ -34,7 +34,11 @@ df_to_map = add_h3_to_gpx_dataframe(df_gpx)
 
 map_start = (43.60728958, 1.448067085)
 
-m = folium.Map(location=map_start, zoom_start=12, tiles="Cartodb dark_matter")
+m = folium.Map(location=map_start,
+        zoom_start=12,
+        width=500,
+        tiles="Cartodb dark_matter"
+    )
 
 # Add the H3 cells to the map
 for _, row in df_to_map.iterrows():
